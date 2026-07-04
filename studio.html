@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Studio — Preamble Design</title>
+<meta name="description" content="The people and philosophy behind Preamble Design — architecture, interiors and bespoke furniture." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Preamble Design" />
+<meta property="og:title" content="Studio — Preamble Design" />
+<meta property="og:description" content="The people and philosophy behind Preamble Design — architecture, interiors and bespoke furniture." />
+<meta property="og:url" content="https://preambledesign.com/studio.html" />
+<meta property="og:image" content="https://preambledesign.com/assets/studio/founders.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Studio — Preamble Design" />
+<meta name="twitter:description" content="The people and philosophy behind Preamble Design — architecture, interiors and bespoke furniture." />
+<meta name="twitter:image" content="https://preambledesign.com/assets/studio/founders.jpg" />
+<link rel="canonical" href="https://preambledesign.com/studio.html" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<meta name="theme-color" content="#1c1916" />
+<link rel="stylesheet" href="assets/site.css" />
+<style>
+  .intro{padding:84px 0;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;border-bottom:1px solid var(--line);}
+  .intro h1{font-family:var(--serif);font-weight:500;font-size:clamp(40px,5vw,72px);line-height:1.04;letter-spacing:-.01em;}
+  .intro h1 em{font-style:italic;color:var(--stone);}
+  .intro p{font-size:16px;line-height:1.75;color:var(--ink-soft);margin-top:22px;max-width:50ch;}
+  .intro .eyebrow{margin-bottom:22px;}
+
+  .belief{padding:104px 0;text-align:center;border-bottom:1px solid var(--line);}
+  .belief blockquote{font-family:var(--serif);font-size:clamp(30px,4.2vw,58px);font-weight:500;line-height:1.18;max-width:18ch;margin:0 auto;letter-spacing:-.01em;}
+  .belief blockquote em{font-style:italic;color:var(--stone);}
+  .belief .eyebrow{margin-bottom:44px;}
+  .manifesto{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);text-align:left;}
+  .manifesto .mf{background:var(--paper);padding:46px 42px;}
+  .manifesto .mf .n{font-family:var(--serif);font-size:15px;color:var(--stone);}
+  .manifesto .mf h3{font-family:var(--serif);font-size:clamp(24px,2.5vw,34px);font-weight:500;line-height:1.14;margin:16px 0 16px;letter-spacing:-.01em;}
+  .manifesto .mf p{font-size:14px;line-height:1.66;color:var(--ink-soft);max-width:44ch;}
+  @media (max-width:760px){ .manifesto{grid-template-columns:1fr;} }
+
+  .portrait{padding:0;background:var(--paper-2);}
+  .portrait .inner{display:flex;justify-content:center;padding:72px 0;}
+  .portrait img{display:block;width:auto;max-width:100%;height:80vh;max-height:820px;object-fit:contain;transition:filter .4s ease;}
+  .portrait .pw{position:relative;}
+  .portrait img.bw{filter:grayscale(1) contrast(1.03) brightness(1.01);}
+  .bw-toggle{position:absolute;top:14px;right:14px;z-index:2;font-family:var(--sans);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);background:rgba(247,244,238,.86);border:1px solid var(--line);border-radius:999px;padding:7px 13px;cursor:pointer;transition:background .2s;}
+  .bw-toggle:hover{background:var(--paper);}
+  .portrait figcaption{margin-top:22px;text-align:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--stone);}
+
+  .svc-detail{padding:104px 0;border-bottom:1px solid var(--line);}
+  .svc-row{display:grid;grid-template-columns:80px 1fr 1.2fr;gap:40px;padding:44px 0;border-top:1px solid var(--line);align-items:start;}
+  .svc-row:last-child{border-bottom:1px solid var(--line);}
+  .svc-row .no{font-family:var(--serif);font-size:24px;color:var(--stone);}
+  .svc-row h3{font-family:var(--serif);font-size:36px;font-weight:500;line-height:1.05;}
+  .svc-row p{font-size:15.5px;line-height:1.7;color:var(--ink-soft);max-width:52ch;}
+  .svc-row .pts{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;}
+
+  .process{padding:104px 0;}
+  .process .sec-head{margin-bottom:48px;}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .step{background:var(--paper);padding:38px 30px;min-height:240px;display:flex;flex-direction:column;}
+  .step .n{font-family:var(--serif);font-size:15px;color:var(--stone);}
+  .step h4{font-family:var(--serif);font-size:25px;font-weight:500;margin:14px 0 12px;}
+  .step p{font-size:13.5px;line-height:1.6;color:var(--ink-soft);}
+
+  .stat-band{background:var(--ink);color:var(--paper);padding:90px 0;}
+  .stat-band .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;}
+  .stat-band b{font-family:var(--serif);font-size:clamp(44px,5vw,72px);font-weight:500;display:block;line-height:1;}
+  .stat-band small{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#9a9183;display:block;margin-top:14px;}
+
+  @media(max-width:900px){
+    .intro,.steps{grid-template-columns:1fr;}
+    .intro{gap:40px;}
+    .portrait img{height:auto;width:100%;max-height:none;}
+    .portrait .inner{padding:40px 0;}
+    .svc-row{grid-template-columns:1fr;gap:16px;}
+    .steps{grid-template-columns:1fr 1fr;}
+    .stat-band .grid{grid-template-columns:1fr 1fr;gap:30px;}
+  }
+</style>
+</head>
+<body>
+  <template id="__bundler_thumbnail" data-bg-color="#f7f4ee">
+    <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1200" height="800" fill="#f7f4ee"/>
+      <g fill="none" stroke="#1c1916" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" opacity="0.6">
+        <path d="M600 250 L860 400 L600 550 L340 400 Z"/>
+        <path d="M600 250 L600 170 M340 400 L340 320 L600 170 L860 320 L860 400"/>
+      </g>
+      <text x="600" y="690" text-anchor="middle" font-family="Georgia,serif" font-size="52" fill="#1c1916">Studio</text>
+    </svg>
+  </template>
+  <header class="nav">
+    <div class="wrap">
+      <a href="index.html" class="mark">Preamble<sup>Design</sup></a>
+      <nav class="menu">
+        <a href="work.html">Work</a>
+        <a href="studio.html" class="active">Studio</a>
+        <a href="team.html">Team</a>
+        <a href="objects.html">Objects</a>
+      </nav>
+      <a href="contact.html" class="nav-cta">Enquire</a>
+    </div>
+  </header>
+
+  <section class="wrap intro">
+    <div>
+      <p class="eyebrow">The Studio</p>
+      <h1>A luxury studio where <em>architecture</em> leads and interiors follow.</h1>
+    </div>
+    <div>
+      <p>Preamble Design is a luxury architecture and interior design studio founded by Rubleen Batth, with Arsh Batth as Technical Director. Based in DLF Phase II, Gurugram, we create high-end residential and commercial spaces across India.</p>
+      <p>We design spaces where architecture leads and interiors follow with purpose — guided by proportion, material depth and quiet precision. From architectural planning to bespoke interior execution, every project is defined by presence, balance and enduring refinement.</p>
+    </div>
+  </section>
+
+  <section class="belief">
+    <div class="wrap">
+      <p class="eyebrow">What we believe</p>
+      <div class="manifesto">
+        <div class="mf">
+          <div class="n">01</div>
+          <h3>If it will date, we won't build it.</h3>
+          <p>Trends are a way to look current for eighteen months and tired forever after. We design for the version of your home that still feels right in fifteen years — quiet, material, unmistakably yours.</p>
+        </div>
+        <div class="mf">
+          <div class="n">02</div>
+          <h3>We make, we don't just specify.</h3>
+          <p>Most studios pick furniture from a catalogue. We draw and build ours in-studio, so the joinery and the architecture speak the same language. Bespoke isn't a line item here — it's how we work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="portrait">
+    <figure class="inner">
+      <div class="pw">
+        <img class="founders-photo" src="assets/studio/founders.jpg" alt="Preamble Design founders standing at the studio reception desk" />
+        <button class="bw-toggle" type="button">View in black &amp; white</button>
+        <figcaption>The founders — at the studio</figcaption>
+      </div>
+    </figure>
+  </section>
+
+  <section class="svc-detail">
+    <div class="wrap">
+      <div class="sec-head" id="services" style="border:0;padding-top:84px;">
+        <div><p class="eyebrow">What we do</p><h2>Services</h2></div>
+      </div>
+      <div class="svc-row">
+        <div class="no">01</div>
+        <div><h3>Architecture</h3></div>
+        <div>
+          <p>Ground-up homes, additions and renovations. We resolve planning, form and structure with technical precision — always in service of how light moves and how a family actually lives.</p>
+          <div class="pts"><span class="tag">Planning</span><span class="tag">Form</span><span class="tag">Structure</span><span class="tag">Site</span></div>
+        </div>
+      </div>
+      <div class="svc-row">
+        <div class="no">02</div>
+        <div><h3>Interior Design</h3></div>
+        <div>
+          <p>From material selection to spatial detail, we shape interiors that feel refined, functional and personal. Every surface, joint and fitting is chosen to age gracefully and belong to its place.</p>
+          <div class="pts"><span class="tag">Material</span><span class="tag">Detail</span><span class="tag">Lighting</span><span class="tag">Styling</span></div>
+        </div>
+      </div>
+      <div class="svc-row">
+        <div class="no">03</div>
+        <div><h3>Custom Furniture</h3></div>
+        <div>
+          <p>Bespoke millwork and furniture, designed for the room it belongs to and built to last. Drawing and making in-studio lets architecture and furniture speak the same language.</p>
+          <div class="pts"><span class="tag">Millwork</span><span class="tag">Bespoke</span><span class="tag">Joinery</span><span class="tag">Craft</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process">
+    <div class="wrap">
+      <div class="sec-head" style="border:0;padding:0;">
+        <div><p class="eyebrow">How we work</p><h2>From first sketch to last detail</h2></div>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="n">01</div><h4>Listen</h4><p>We begin with how you live — your rituals, your collection, your light. Site, orientation and brief are studied together before a single line is drawn.</p></div>
+        <div class="step"><div class="n">02</div><h4>Concept</h4><p>Plans, massing and spatial sequence are explored as architecture and interior together — establishing proportion, flow and a clear material direction.</p></div>
+        <div class="step"><div class="n">03</div><h4>Develop</h4><p>The design is tested in drawings, models and full material boards. Stone, joinery and finishes are selected and sampled against the light of the room.</p></div>
+        <div class="step"><div class="n">04</div><h4>Detail</h4><p>Every junction is resolved — mouldings, edge profiles, joinery sections and bespoke furniture drawn to millimetre. This is where the work earns its calm.</p></div>
+        <div class="step"><div class="n">05</div><h4>Build</h4><p>We stay on site through delivery, coordinating trades and craftspeople so the built result holds true to the intent of every drawing.</p></div>
+        <div class="step"><div class="n">06</div><h4>Style</h4><p>Furniture, lighting and the final layer of objects are placed by hand — the moment a structured space becomes a considered, lived-in home.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stat-band">
+    <div class="wrap">
+      <div class="grid">
+        <div><b>2020</b><small>Founded · 6 years on</small></div>
+        <div><b>50+</b><small>Projects delivered</small></div>
+        <div><b>15</b><small>In the studio</small></div>
+        <div><b>Pan-India</b><small>Delhi NCR &amp; beyond</small></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <div class="cta-band">
+        <h2>Meet the people behind it.</h2>
+        <a href="team.html" class="btn">View the team</a>
+      </div>
+      <div class="foot-grid">
+        <div>
+          <a href="index.html" class="mark">Preamble<sup>Design</sup></a>
+          <p class="foot-about">Luxury architecture &amp; interior design studio. Based in Gurugram, creating refined residential and commercial spaces across India.</p>
+        </div>
+        <div><h5>Studio</h5><ul><li><a href="studio.html">About</a></li><li><a href="team.html">Team</a></li><li><a href="work.html">Work</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h5>Explore</h5><ul><li><a href="work.html">Projects</a></li><li><a href="objects.html">Objects</a></li><li><a href="studio.html#services">Services</a></li><li><a href="contact.html">Enquire</a></li></ul></div>
+        <div><h5>Contact</h5><ul class="ic-list"><li><a href="mailto:info@preambledesign.com"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>info@preambledesign.com</a></li><li><a href="https://share.google/Eu4wg0RfiMcpWEWrY" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>DLF Phase II, Gurugram</a></li><li><a href="https://www.instagram.com/preambledesigns/" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>@preambledesigns</a></li><li><a href="https://wa.me/919915011132?text=Hi%20Preamble%20Design%2C%20I%27d%20like%20to%20enquire%20about%20a%20project." target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-2.9.8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5.1-.2 0-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.7 4.2 3.7 1.6.6 2.2.7 2.9.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3Z"/></svg>WhatsApp us</a></li></ul></div>
+      </div>
+      <div class="foot-bot"><span>© 2020–2026 Preamble Design</span><span>Gurugram · India</span></div>
+    </div>
+  </footer>
+  <script>
+    (function(){
+      var KEY='preamble-portrait-bw';
+      function apply(on){
+        document.querySelectorAll('.founders-photo').forEach(function(i){i.classList.toggle('bw',on);});
+        document.querySelectorAll('.bw-toggle').forEach(function(b){b.textContent=on?'View in colour':'View in black \u0026 white';b.setAttribute('aria-pressed',on);});
+      }
+      var on=localStorage.getItem(KEY)==='1';
+      apply(on);
+      document.addEventListener('click',function(e){
+        var b=e.target.closest('.bw-toggle');if(!b)return;
+        on=!on;localStorage.setItem(KEY,on?'1':'0');apply(on);
+      });
+    })();
+  </script>
+  <script src="assets/nav.js" defer></script>
+</body>
+</html>
