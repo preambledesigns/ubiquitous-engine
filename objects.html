@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Objects — Preamble Design</title>
+<meta name="description" content="Objects by Preamble Design — a considered collection of bespoke furniture and pieces." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Preamble Design" />
+<meta property="og:title" content="Objects — Preamble Design" />
+<meta property="og:description" content="Objects by Preamble Design — a considered collection of bespoke furniture and pieces." />
+<meta property="og:url" content="https://preambledesign.com/objects.html" />
+<meta property="og:image" content="https://preambledesign.com/assets/projects/sector8/web/01.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Objects — Preamble Design" />
+<meta name="twitter:description" content="Objects by Preamble Design — a considered collection of bespoke furniture and pieces." />
+<meta name="twitter:image" content="https://preambledesign.com/assets/projects/sector8/web/01.jpg" />
+<link rel="stylesheet" href="assets/site.css" />
+<style>
+  body{background:var(--ink);color:var(--paper);}
+  header.nav{background:rgba(28,25,22,.82);border-bottom:1px solid rgba(247,244,238,.14);}
+  .nav .mark,.nav .menu a{color:var(--paper);}
+  .nav .menu a::after{background:var(--paper);}
+  .nav-cta{border-color:rgba(247,244,238,.4);}
+  .nav-burger{color:var(--paper);}
+  .nav-cta:hover{background:var(--paper);color:var(--ink);border-color:var(--paper);}
+  .o-hero{padding:96px 0 70px;border-bottom:1px solid rgba(247,244,238,.14);}
+  .o-hero .eyebrow{color:#c9b89a;margin-bottom:24px;}
+  .o-hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(52px,7.2vw,116px);line-height:.95;letter-spacing:-.01em;max-width:13ch;}
+  .o-hero h1 em{font-style:italic;color:#c9b89a;}
+  .o-hero .row{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-top:34px;flex-wrap:wrap;}
+  .o-hero p{font-size:16px;line-height:1.7;color:#cfc7b8;max-width:48ch;}
+  .o-hero .badge{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#c9b89a;border:1px solid rgba(201,184,154,.5);padding:10px 18px;white-space:nowrap;}
+  .cats{padding:96px 0;}
+  .cat{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;padding:54px 0;border-top:1px solid rgba(247,244,238,.14);align-items:center;}
+  .cat:last-child{border-bottom:1px solid rgba(247,244,238,.14);}
+  .cat .no{font-family:var(--serif);font-size:16px;color:#9a9183;}
+  .cat h2{font-family:var(--serif);font-size:clamp(34px,4vw,56px);font-weight:500;line-height:1;margin:12px 0 16px;letter-spacing:-.01em;}
+  .cat p{font-size:14.5px;line-height:1.65;color:#cfc7b8;max-width:34ch;}
+  .cat .items{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;}
+  .cat .items .tag{border-color:rgba(247,244,238,.2);color:#9a9183;}
+  .o-ph{position:relative;height:380px;background:repeating-linear-gradient(135deg,rgba(247,244,238,.06) 0 1px,transparent 1px 9px),#262220;display:flex;align-items:flex-end;overflow:hidden;}
+  .o-ph span{font-family:ui-monospace,monospace;font-size:10.5px;letter-spacing:.08em;color:#9a9183;background:var(--ink);padding:5px 9px;margin:14px;border:1px solid rgba(247,244,238,.16);text-transform:uppercase;}
+  .cat .pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .cat .pair .o-ph{height:300px;}
+  .ethos{background:#262220;padding:104px 0;text-align:center;}
+  .ethos blockquote{font-family:var(--serif);font-size:clamp(28px,3.8vw,50px);font-weight:500;line-height:1.22;max-width:20ch;margin:0 auto;letter-spacing:-.01em;}
+  .ethos blockquote em{font-style:italic;color:#c9b89a;}
+  .waitlist{padding:104px 0;}
+  .waitlist .wrap{max-width:720px;text-align:center;}
+  .waitlist .eyebrow{color:#c9b89a;}
+  .waitlist h2{font-family:var(--serif);font-size:clamp(34px,4.6vw,60px);font-weight:500;line-height:1.05;margin:16px 0 18px;letter-spacing:-.01em;}
+  .waitlist p{font-size:16px;color:#cfc7b8;line-height:1.65;max-width:46ch;margin:0 auto 34px;}
+  .wl-form{display:flex;gap:12px;max-width:480px;margin:0 auto;}
+  .wl-form input{flex:1;background:transparent;border:1px solid rgba(247,244,238,.3);color:var(--paper);padding:15px 18px;font-family:var(--sans);font-size:14px;outline:none;transition:.25s;}
+  .wl-form input:focus{border-color:#c9b89a;}
+  .wl-form input::placeholder{color:#8a8276;}
+  .wl-form button{background:#c9b89a;color:var(--ink);border:0;font-family:var(--sans);font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:0 26px;cursor:pointer;transition:.25s;font-weight:600;}
+  .wl-form button:hover{background:var(--paper);}
+  .wl-note{font-size:12px;color:#8a8276;margin-top:16px;letter-spacing:.03em;}
+  .wl-done{color:#c9b89a;font-family:var(--serif);font-size:22px;margin-top:8px;display:none;}
+  .o-foot{padding:80px 0 48px;border-top:1px solid rgba(247,244,238,.14);}
+  .o-foot .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;}
+  .o-foot .mark{color:var(--paper);margin-bottom:18px;display:inline-block;}
+  .o-foot .foot-about{color:#9a9183;}
+  .o-foot h5{color:#9a9183;}
+  .o-foot ul a:hover{color:#c9b89a;}
+  .o-foot .foot-grid>*{min-width:0;}
+  .o-foot ul a{overflow-wrap:anywhere;}
+  .o-foot .foot-bot{border-color:rgba(247,244,238,.14);color:#9a9183;}
+  @media(max-width:900px){
+    .cat{grid-template-columns:1fr;gap:24px;}
+    .cat .pair{grid-column:auto !important;}
+    .wl-form{flex-direction:column;}
+    .wl-form button{padding:15px;}
+    .o-foot .foot-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:480px){
+    .o-foot .foot-grid{grid-template-columns:1fr;gap:30px;}
+  }
+</style>
+</head>
+<body>
+  <template id="__bundler_thumbnail" data-bg-color="#f7f4ee">
+    <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1200" height="800" fill="#f7f4ee"/>
+      <g fill="none" stroke="#1c1916" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" opacity="0.6">
+        <path d="M600 250 L860 400 L600 550 L340 400 Z"/>
+        <path d="M600 250 L600 170 M340 400 L340 320 L600 170 L860 320 L860 400"/>
+      </g>
+      <text x="600" y="690" text-anchor="middle" font-family="Georgia,serif" font-size="52" fill="#1c1916">Objects</text>
+    </svg>
+  </template>
+  <header class="nav">
+    <div class="wrap">
+      <a href="index.html" class="mark">Preamble<sup>Design</sup></a>
+      <nav class="menu">
+        <a href="work.html">Work</a>
+        <a href="studio.html">Studio</a>
+        <a href="team.html">Team</a>
+        <a href="objects.html" class="active">Objects</a>
+      </nav>
+      <a href="contact.html" class="nav-cta">Enquire</a>
+    </div>
+  </header>
+  <section class="wrap o-hero">
+    <p class="eyebrow">Objects — A Preamble Collection</p>
+    <h1>Furniture &amp; light, <em>coming soon</em>.</h1>
+    <div class="row">
+      <p>A line of furniture and lighting designed exclusively by our studio — the same obsession with material and detail that shapes our homes, made available as objects in their own right.</p>
+      <span class="badge">In development · 2026</span>
+    </div>
+  </section>
+  <section class="cats">
+    <div class="wrap">
+      <div class="cat">
+        <div class="label">
+          <div class="no">01</div>
+          <h2>Side Tables</h2>
+          <p>Quiet, sculptural pieces in stone and solid timber — built to sit beside a chair for a lifetime.</p>
+          <div class="items"><span class="tag">Stone</span><span class="tag">Solid timber</span><span class="tag">Limited runs</span></div>
+        </div>
+        <div class="o-ph" style="grid-column:span 2;"><img src="assets/projects/samsara/w/3488.jpg" alt="Sculptural curved timber side table" /></div>
+      </div>
+      <div class="cat">
+        <div class="pair" style="grid-column:span 2;order:2;">
+          <div class="o-ph"><img src="assets/projects/samsara/w/2956.jpg" alt="Lounge chair in oiled wood and natural upholstery" loading="lazy" decoding="async" /></div>
+          <div class="o-ph"><img src="assets/projects/neoclassical/w/5.jpg" alt="Cane and timber occasional chairs" loading="lazy" decoding="async" /></div>
+        </div>
+        <div class="label" style="order:1;">
+          <div class="no">02</div>
+          <h2>Seating</h2>
+          <p>Chairs and lounge pieces in oiled wood and natural upholstery — comfortable, honest, made to age well.</p>
+          <div class="items"><span class="tag">Oak &amp; teak</span><span class="tag">Natural fibres</span><span class="tag">Bespoke</span></div>
+        </div>
+      </div>
+      <div class="cat">
+        <div class="label">
+          <div class="no">03</div>
+          <h2>Lighting</h2>
+          <p>Lamps and fixtures that treat light as a material — warm, directional and quietly architectural.</p>
+          <div class="items"><span class="tag">Table lamps</span><span class="tag">Pendants</span><span class="tag">Brass</span></div>
+        </div>
+        <div class="o-ph" style="grid-column:span 2;"><img src="assets/projects/neoclassical/w/n6.jpg" alt="Cascade of glass globe pendant lights" loading="lazy" decoding="async" /></div>
+      </div>
+    </div>
+  </section>
+  <section class="ethos">
+    <div class="wrap">
+      <blockquote>Designed for the room it belongs to — and <em>made to last</em>.</blockquote>
+    </div>
+  </section>
+  <section class="waitlist" id="waitlist">
+    <div class="wrap">
+      <p class="eyebrow">Be the first to know</p>
+      <h2>Join the waitlist</h2>
+      <p>We'll share the collection with our list before anyone else — early previews, the story behind each piece, and first access when it launches.</p>
+      <form class="wl-form" id="wlForm">
+        <input type="email" id="wlEmail" placeholder="your@email.com" required aria-label="Email address" />
+        <button type="submit">Notify me</button>
+      </form>
+      <div class="wl-note">No spam — just the collection. Unsubscribe anytime.</div>
+      <div class="wl-done" id="wlDone">Thank you — you're on the list.</div>
+    </div>
+  </section>
+  <footer class="o-foot">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <a href="index.html" class="mark">Preamble<sup>Design</sup></a>
+          <p class="foot-about">Luxury architecture &amp; interior design studio. Based in Gurugram, creating refined residential and commercial spaces across India.</p>
+        </div>
+        <div><h5>Studio</h5><ul><li><a href="studio.html">About</a></li><li><a href="team.html">Team</a></li><li><a href="work.html">Work</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h5>Explore</h5><ul><li><a href="work.html">Projects</a></li><li><a href="objects.html">Objects</a></li><li><a href="studio.html#services">Services</a></li><li><a href="contact.html">Enquire</a></li></ul></div>
+        <div><h5>Contact</h5><ul class="ic-list"><li><a href="mailto:info@preambledesign.com"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>info@preambledesign.com</a></li><li><a href="https://share.google/Eu4wg0RfiMcpWEWrY" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>DLF Phase II, Gurugram</a></li><li><a href="https://www.instagram.com/preambledesigns/" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>@preambledesigns</a></li><li><a href="https://wa.me/919915011132?text=Hi%20Preamble%20Design%2C%20I%27d%20like%20to%20enquire%20about%20a%20project." target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-2.9.8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5.1-.2 0-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.7 4.2 3.7 1.6.6 2.2.7 2.9.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3Z"/></svg>WhatsApp us</a></li></ul></div>
+      </div>
+      <div class="foot-bot"><span>© 2020–2026 Preamble Design</span><span>Gurugram · India</span></div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('wlForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      var email = document.getElementById('wlEmail').value.trim();
+      if(!email) return;
+      this.style.display = 'none';
+      document.querySelector('.wl-note').style.display = 'none';
+      document.getElementById('wlDone').style.display = 'block';
+    });
+  </script>
+  <script src="assets/nav.js" defer></script>
+</body>
+</html>

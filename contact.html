@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — Preamble Design</title>
+<meta name="description" content="Begin a project with Preamble Design. Enquiries for residential, commercial and furniture commissions." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Preamble Design" />
+<meta property="og:title" content="Contact — Preamble Design" />
+<meta property="og:description" content="Begin a project with Preamble Design. Enquiries for residential, commercial and furniture commissions." />
+<meta property="og:url" content="https://preambledesign.com/contact.html" />
+<meta property="og:image" content="https://preambledesign.com/assets/studio/founders.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Contact — Preamble Design" />
+<meta name="twitter:description" content="Begin a project with Preamble Design. Enquiries for residential, commercial and furniture commissions." />
+<meta name="twitter:image" content="https://preambledesign.com/assets/studio/founders.jpg" />
+<link rel="stylesheet" href="assets/site.css" />
+<style>
+  .c-wrap{padding:60px 0 72px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+  .c-intro .eyebrow{margin-bottom:22px;}
+  .c-intro h1{font-family:var(--serif);font-weight:500;font-size:clamp(46px,6vw,88px);line-height:.98;letter-spacing:-.01em;}
+  .c-intro h1 em{font-style:italic;color:var(--stone);}
+  .c-intro .lede{font-size:16px;line-height:1.7;color:var(--ink-soft);max-width:42ch;margin-top:24px;}
+  .c-details{margin-top:40px;display:flex;flex-direction:column;}
+  .c-details .item{padding:16px 0;border-top:1px solid var(--line);}
+  .c-details .item:last-child{border-bottom:1px solid var(--line);}
+  .c-details dt{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--stone);margin-bottom:8px;}
+  .c-details dd{font-size:17px;display:flex;align-items:center;gap:11px;}
+  .c-details dd a:hover{color:var(--stone);}
+  .c-details .dic{width:17px;height:17px;flex:none;color:var(--stone);opacity:.75;}
+
+  .c-form{border-top:1px solid var(--ink);padding-top:40px;}
+  .c-form .fg{margin-bottom:26px;}
+  .c-form label{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--stone);margin-bottom:10px;}
+  .c-form input,.c-form select,.c-form textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);
+    padding:10px 0;font-family:var(--sans);font-size:16px;color:var(--ink);outline:none;transition:.25s;}
+  .c-form input:focus,.c-form select:focus,.c-form textarea:focus{border-color:var(--ink);}
+  .c-form input::placeholder,.c-form textarea::placeholder{color:#b3aa9c;}
+  .c-form textarea{resize:vertical;min-height:150px;}
+  .c-form .two{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+  .c-form button{margin-top:12px;}
+  .c-done{display:none;padding:30px 0;font-family:var(--serif);font-size:24px;color:var(--ink);}
+  .c-done em{font-style:italic;color:var(--stone);}
+  .c-alt{margin-top:30px;padding-top:26px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.6;color:var(--ink-soft);}
+  .c-alt a{color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:2px;transition:.2s;}
+  .c-alt a:hover{color:var(--stone);border-color:var(--stone);}
+
+  @media(max-width:900px){
+    .c-wrap{grid-template-columns:1fr;gap:48px;}
+    .c-form .two{grid-template-columns:1fr;gap:26px;}
+  }
+
+  /* ---------- book an appointment ---------- */
+  .book{background:var(--paper-2);border-top:1px solid var(--line);}
+  .book .in{padding:64px 0 72px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+  .book .eyebrow{margin-bottom:20px;}
+  .book h2{font-family:var(--serif);font-weight:500;font-size:clamp(34px,4.2vw,56px);line-height:1.02;letter-spacing:-.01em;}
+  .book h2 em{font-style:italic;color:var(--stone);}
+  .book .lede{font-size:16px;line-height:1.7;color:var(--ink-soft);max-width:42ch;margin-top:22px;}
+  .book .cta{margin-top:34px;display:inline-flex;align-items:center;gap:11px;}
+  .book .cta svg{width:18px;height:18px;}
+  .book .opts{display:flex;flex-direction:column;gap:2px;}
+  .book .opt{display:flex;gap:18px;align-items:flex-start;padding:24px 0;border-top:1px solid var(--line);}
+  .book .opt:last-child{border-bottom:1px solid var(--line);}
+  .book .opt svg{width:22px;height:22px;flex:none;color:var(--stone);margin-top:2px;}
+  .book .opt .oc{flex:1;}
+  .book .opt h4{font-size:16px;font-weight:600;letter-spacing:-.005em;margin-bottom:4px;}
+  .book .opt p{font-size:14px;line-height:1.55;color:var(--ink-soft);}
+  .book .opt .obook{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:3px;transition:.2s;}
+  .book .opt .obook:hover{color:var(--stone);border-color:var(--stone);}
+  .book .opt .obook svg{width:13px;height:13px;}
+  .book .note{grid-column:1 / -1;margin-top:14px;padding-top:26px;border-top:1px solid var(--line);font-size:13.5px;line-height:1.6;color:var(--stone);max-width:70ch;}
+  @media(max-width:900px){
+    .book .in{grid-template-columns:1fr;gap:44px;padding:64px 0 72px;}
+  }
+</style>
+</head>
+<body>
+  <template id="__bundler_thumbnail" data-bg-color="#f7f4ee">
+    <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1200" height="800" fill="#f7f4ee"/>
+      <g fill="none" stroke="#1c1916" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" opacity="0.6">
+        <path d="M600 250 L860 400 L600 550 L340 400 Z"/>
+        <path d="M600 250 L600 170 M340 400 L340 320 L600 170 L860 320 L860 400"/>
+      </g>
+      <text x="600" y="690" text-anchor="middle" font-family="Georgia,serif" font-size="52" fill="#1c1916">Contact</text>
+    </svg>
+  </template>
+  <header class="nav">
+    <div class="wrap">
+      <a href="index.html" class="mark">Preamble<sup>Design</sup></a>
+      <nav class="menu">
+        <a href="work.html">Work</a>
+        <a href="studio.html">Studio</a>
+        <a href="team.html">Team</a>
+        <a href="objects.html">Objects</a>
+      </nav>
+      <a href="contact.html" class="nav-cta active">Enquire</a>
+    </div>
+  </header>
+
+  <section class="wrap c-wrap">
+    <div class="c-intro">
+      <p class="eyebrow">Enquiries</p>
+      <h1>Let's start a <em>conversation</em>.</h1>
+      <p class="lede">Tell us a little about your project — a plot, a home to renovate, an interior, or a commission. We take on a limited number each year, and we read every note.</p>
+      <dl class="c-details">
+        <div class="item"><dt>Email</dt><dd><svg class="dic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg><a href="mailto:info@preambledesign.com">info@preambledesign.com</a></dd></div>
+        <div class="item"><dt>Phone</dt><dd><svg class="dic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5a2 2 0 0 1 2-2Z"/></svg><span><a href="tel:+919915011132">+91 99150-11132</a> · <a href="tel:+918146065148">+91 81460-65148</a></span></dd></div>
+        <div class="item"><dt>Studio</dt><dd><svg class="dic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg><a href="https://share.google/Eu4wg0RfiMcpWEWrY" target="_blank" rel="noopener">J-9/18, DLF Phase II, Sector 25<br />Gurugram, Haryana, India</a></dd></div>
+        <div class="item"><dt>WhatsApp</dt><dd><svg class="dic" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-2.9.8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5.1-.2 0-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.7 4.2 3.7 1.6.6 2.2.7 2.9.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3Z"/></svg><a href="https://wa.me/919915011132?text=Hi%20Preamble%20Design%2C%20I%27d%20like%20to%20enquire%20about%20a%20project." target="_blank" rel="noopener">Message us on WhatsApp</a></dd></div>
+        <div class="item"><dt>Follow</dt><dd><svg class="dic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg><a href="https://www.instagram.com/preambledesigns/" target="_blank" rel="noopener">@preambledesigns</a></dd></div>
+      </dl>
+    </div>
+
+    <form class="c-form" id="cForm" action="https://formspree.io/f/xbdvpndw" method="POST">
+      <div class="two">
+        <div class="fg"><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your name" required /></div>
+        <div class="fg"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="your@email.com" required /></div>
+      </div>
+      <div class="two">
+        <div class="fg"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" placeholder="+91 …" /></div>
+        <div class="fg"><label for="loc">Location</label><input id="loc" name="location" type="text" placeholder="City" /></div>
+      </div>
+      <div class="fg"><label for="type">Project type</label>
+        <select id="type" name="project_type">
+          <option>Architecture — new home</option>
+          <option>Interior design</option>
+          <option>Architecture + interior</option>
+          <option>Custom furniture</option>
+          <option>Renovation</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="fg"><label for="msg">About the project</label><textarea id="msg" name="message" placeholder="A few lines about what you have in mind, the site, timeline…"></textarea></div>
+      <input type="hidden" name="_subject" value="New enquiry — Preamble Design website" />
+      <button type="submit" class="btn inv">Send enquiry</button>
+      <p class="c-alt">Prefer to speak with a designer first? <a href="#book">Book a consultation</a> — by phone, Google Meet, or at the studio.</p>
+    </form>
+    <div class="c-done" id="cDone">Thank you — we've received your enquiry and will be <em>in touch shortly</em>.</div>
+  </section>
+
+  <section class="book" id="book">
+    <div class="wrap in">
+      <div class="book-copy">
+        <p class="eyebrow">Consultations</p>
+        <h2>Book an <em>appointment</em>.</h2>
+        <p class="lede">Prefer to speak with a designer directly? Choose a time that suits you and we'll confirm instantly. Meet us over a phone call, on Google Meet, or in the Gurugram studio.</p>
+        <a href="https://calendar.app.google/YSEpWKxBvWVt7t3J6" target="_blank" rel="noopener" class="btn inv cta" id="bookBtn">          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v3M16 3v3"/></svg>
+          Book with a designer
+        </a>
+      </div>
+      <div class="opts">
+        <div class="opt">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5a2 2 0 0 1 2-2Z"/></svg>
+          <div class="oc"><h4>Phone call</h4><p>A 20-minute introductory call to talk through your project and how we work.</p><a href="https://calendar.app.google/P5djG6mTusXa5AfY9" target="_blank" rel="noopener" class="obook">Book a call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        </div>
+        <div class="opt">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3z"/></svg>
+          <div class="oc"><h4>Google Meet</h4><p>A 30-minute video consultation — share references on screen; a Meet link is emailed to you automatically.</p><a href="https://calendar.app.google/gtchBZWA26zmyxkx7" target="_blank" rel="noopener" class="obook">Book a video call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        </div>
+        <div class="opt">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>
+          <div class="oc"><h4>At the studio</h4><p>A 45-minute visit to our DLF Phase II studio to review materials, samples and drawings in person.</p><a href="https://calendar.app.google/eA8htZsGefS7HKrv6" target="_blank" rel="noopener" class="obook">Book a studio visit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        </div>
+      </div>
+      <p class="note">You'll receive a confirmation as soon as you book. If your plans change, please reschedule or cancel from that email — it lets us offer the time to another client.</p>
+    </div>
+  </section>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <a href="index.html" class="mark">Preamble<sup>Design</sup></a>
+          <p class="foot-about">Luxury architecture &amp; interior design studio. Based in Gurugram, creating refined residential and commercial spaces across India.</p>
+        </div>
+        <div><h5>Studio</h5><ul><li><a href="studio.html">About</a></li><li><a href="team.html">Team</a></li><li><a href="work.html">Work</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h5>Explore</h5><ul><li><a href="work.html">Projects</a></li><li><a href="objects.html">Objects</a></li><li><a href="studio.html#services">Services</a></li><li><a href="contact.html">Enquire</a></li></ul></div>
+        <div><h5>Contact</h5><ul class="ic-list"><li><a href="mailto:info@preambledesign.com"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>info@preambledesign.com</a></li><li><a href="https://share.google/Eu4wg0RfiMcpWEWrY" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>DLF Phase II, Gurugram</a></li><li><a href="https://www.instagram.com/preambledesigns/" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>@preambledesigns</a></li><li><a href="https://wa.me/919915011132?text=Hi%20Preamble%20Design%2C%20I%27d%20like%20to%20enquire%20about%20a%20project." target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-2.9.8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5.1-.2 0-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.7 4.2 3.7 1.6.6 2.2.7 2.9.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3Z"/></svg>WhatsApp us</a></li></ul></div>
+      </div>
+      <div class="foot-bot"><span>© 2020–2026 Preamble Design</span><span>Gurugram · India</span></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('cForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      var form = this;
+      var btn = form.querySelector('button[type="submit"]');
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(res){
+        if (res.ok) {
+          form.style.display = 'none';
+          document.getElementById('cDone').style.display = 'block';
+        } else {
+          throw new Error('submit failed');
+        }
+      }).catch(function(){
+        if (btn) { btn.disabled = false; btn.textContent = 'Send enquiry'; }
+        // Fallback: open the visitor's email app with the enquiry prefilled
+        var v = function(id){ var el = document.getElementById(id); return el ? el.value.trim() : ''; };
+        var body = 'Name: ' + v('name') + '\nEmail: ' + v('email') + '\nPhone: ' + v('phone')
+          + '\nProject type: ' + v('type') + '\nLocation: ' + v('loc')
+          + '\n\nAbout the project:\n' + v('msg') + '\n';
+        window.location.href = 'mailto:info@preambledesign.com?subject='
+          + encodeURIComponent('New enquiry — ' + (v('name') || 'Website'))
+          + '&body=' + encodeURIComponent(body);
+      });
+    });
+  </script>
+  <script src="assets/nav.js" defer></script>
+</body>
+</html>
